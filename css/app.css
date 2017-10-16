@@ -1,4 +1,4 @@
-input[type=range][orient=vertical] {
+.pil input[type=range][orient=vertical] {
     writing-mode: bt-lr;
     /* IE */
     -webkit-appearance: slider-vertical;
@@ -9,23 +9,26 @@ input[type=range][orient=vertical] {
 }
 
 
-#container {
-    margin-top: 50px;
+.pil #project {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 100px;
 }
 
-#status {
+.pil #status {
     margin-left: 10%;
     float: left;
 
 }
 
-.status-bar {
+.pil .status-bar {
   display: inline-block;
   width: 20px;
   height: 150px;
   padding: 0;
 }
-.status-bar input {
+.pil .status-bar input {
   width: 150px;
   height: 20px;
   margin: 0;
@@ -34,7 +37,7 @@ input[type=range][orient=vertical] {
 }
 
 
-#auto-charge-button {
+.pil #auto-charge-button {
     float: left;
     padding: 9px 10px;
     margin-left: 10%;
@@ -42,12 +45,12 @@ input[type=range][orient=vertical] {
     height: 40px;
 }
 
-#battery {
+.pil #battery {
     float: right;
     margin-right: 40%;
 }
 
-#battery-body {
+.pil #battery-body {
     margin-left: 50%;
     width: 132px;
     height: 302px;
@@ -57,7 +60,7 @@ input[type=range][orient=vertical] {
     border-bottom-right-radius: 4px;
 }
 
-#battery-top1 {
+.pil #battery-top1 {
     margin-left: calc(50% + 40px);
     width: 50px;
     height: 15px;
@@ -68,7 +71,7 @@ input[type=range][orient=vertical] {
     background: linear-gradient(-90deg, black, grey);
 }
 
-#battery-top2 {
+.pil #battery-top2 {
     margin-left: 50%;
     margin-bottom: -1px;
     width: 132px;
@@ -81,7 +84,7 @@ input[type=range][orient=vertical] {
 }
 
 
-.battery-bar {
+.pil .battery-bar {
     margin-left: -1px;
     width: 132px;
     border: 1px solid black;
@@ -89,7 +92,7 @@ input[type=range][orient=vertical] {
     background-color: green;
 }
 
-#battery-bottom {
+.pil #battery-bottom {
     margin-left: 50%;
     margin-top: -1px;
     width: 132px;

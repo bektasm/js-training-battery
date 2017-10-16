@@ -1,64 +1,94 @@
-$("#auto-charge-button").click(function () {
-    $(".full").css("background-color", "white");
-    $(".high").css("background-color", "white");
-    $(".half").css("background-color", "white");
-    $(".low").css("background-color", "white");
-    setTimeout(function () {
-        $(".full").css("background-color", "red");
-        $(".high").css("background-color", "white");
-        $(".half").css("background-color", "white");
-        $(".low").css("background-color", "white");
-    }, 3000);
+$(document).ready(function(){
+    $("#ranger").val(4);
 
-    setTimeout(function () {
-        $(".full").css("background-color", "orange");
-        $(".high").css("background-color", "orange");
-    }, 6000);
+    $("#ranger").on('change', function(elm){
+        myFunction($(this).val());
+    })
 
-    setTimeout(function () {
-        $(".full").css("background-color", "yellow");
-        $(".high").css("background-color", "yellow");
-        $(".half").css("background-color", "yellow");
+    $("#auto-charge-button").click(function (e) {
+        // prevent navigation keys trigger
+        // e.preventDefault();
+        $("#ranger").val(0);
+        paint([".full", ".high", ".half", ".low"], "white");
+        setTimeout(function () {
+            paint([".full"], "red");
+            paint([".high", ".half", ".low"], "white");
+            $("#ranger").val(1);
 
-    }, 9000);
+        }, 3000);
 
-    setTimeout(function () {
-        $(".full").css("background-color", "green");
-        $(".high").css("background-color", "green");
-        $(".half").css("background-color", "green");
-        $(".low").css("background-color", "green");
-    }, 12000);
+        setTimeout(function () {
+            paint([".full", ".high"], "orange");
+            $("#ranger").val(2);
 
-});
+        }, 6000);
+
+        setTimeout(function () {
+            paint([".full", ".high", ".half"], "yellow");
+            $("#ranger").val(3);
 
 
+        }, 9000);
 
-function myFunction(val) {
-    if (val == 4) {
-        $(".full").css("background-color", "green");
-        $(".high").css("background-color", "green");
-        $(".half").css("background-color", "green");
-        $(".low").css("background-color", "green");
-    } else if (val == 3) {
-        $(".full").css("background-color", "yellow");
-        $(".high").css("background-color", "yellow");
-        $(".half").css("background-color", "yellow");
-        $(".low").css("background-color", "white");
+        setTimeout(function () {
+            paint([".full", ".high", ".half", ".low"], "green");
+            $("#ranger").val(4);
 
-    } else if (val == 2) {
-        $(".full").css("background-color", "orange");
-        $(".high").css("background-color", "orange");
-         $(".half").css("background-color", "white");
-        $(".low").css("background-color", "white");
-    } else if (val == 1) {
-        $(".full").css("background-color", "red");
-        $(".high").css("background-color", "white");
-        $(".half").css("background-color", "white");
-        $(".low").css("background-color", "white");
-    } else {
-        $(".full").css("background-color", "white");
-        $(".high").css("background-color", "white");
-        $(".half").css("background-color", "white");
-        $(".low").css("background-color", "white");
+        }, 12000);
+
+    });
+
+    function paint(sections, color) {
+        // console.log('hallo',sections, color);
+        sections.forEach(function (section) {
+            $(section).css("background-color", color);
+        })
     }
+
+    function myFunction(val) {
+        // console.log('hallo', val);
+        switch(+val){
+            case 0:
+                paint([".full", ".high", ".half", ".low"], "white");
+                break;
+            case 1:
+                paint([".full"], "red");
+                paint([".high", ".half", ".low"], "white");
+                break;
+            case 2:
+                paint([".full", ".high"], "orange");
+                paint([".low", ".half"], "white");
+                break;
+            case 3:
+                paint([".full", ".high", ".half"], "yellow");
+                paint([".low"], "white");
+                break;
+            case 4:
+                paint([".full", ".high", ".half", ".low"], "green");
+                break;
+        }
+    }
+})
+
+
+/* OO Way **/
+
+
+function Battary(){
+    this.segment = 4;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
