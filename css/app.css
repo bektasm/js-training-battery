@@ -1,8 +1,102 @@
-input[type=range][orient=vertical]
-{
-    writing-mode: bt-lr; /* IE */
-    -webkit-appearance: slider-vertical; /* WebKit */
+input[type=range][orient=vertical] {
+    writing-mode: bt-lr;
+    /* IE */
+    -webkit-appearance: slider-vertical;
+    /* WebKit */
     width: 8px;
     height: 175px;
     padding: 0 5px;
+}
+
+
+#container {
+    margin-top: 50px;
+}
+
+#status {
+    margin-left: 10%;
+    float: left;
+
+}
+
+.status-bar {
+  display: inline-block;
+  width: 20px;
+  height: 150px;
+  padding: 0;
+}
+.status-bar input {
+  width: 150px;
+  height: 20px;
+  margin: 0;
+  transform-origin: 75px 75px;
+  transform: rotate(-90deg);
+}
+
+
+#auto-charge-button {
+    float: left;
+    padding: 9px 10px;
+    margin-left: 10%;
+    width: 105px;
+    height: 40px;
+}
+
+#battery {
+    float: right;
+    margin-right: 40%;
+}
+
+#battery-body {
+    margin-left: 50%;
+    width: 132px;
+    height: 302px;
+    border: 1px solid transparent;
+    position: relative;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+#battery-top1 {
+    margin-left: calc(50% + 40px);
+    width: 50px;
+    height: 15px;
+    border: 1px solid black;
+    background-color: white;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    background: linear-gradient(-90deg, black, grey);
+}
+
+#battery-top2 {
+    margin-left: 50%;
+    margin-bottom: -1px;
+    width: 132px;
+    height: 10px;
+    border: 1px solid black;
+    background-color: black;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    background: linear-gradient(-90deg, black, grey);
+}
+
+
+.battery-bar {
+    margin-left: -1px;
+    width: 132px;
+    border: 1px solid black;
+    height: 75px;
+    background-color: green;
+}
+
+#battery-bottom {
+    margin-left: 50%;
+    margin-top: -1px;
+    width: 132px;
+    height: 10px;
+    border: 1px solid black;
+    background-color: black;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    background-color: linear-gradient(-90deg, black, grey);
 }

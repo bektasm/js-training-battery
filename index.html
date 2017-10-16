@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-    <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>IT Club Oberland - JS Training</title>
@@ -13,17 +13,43 @@
     <link rel="stylesheet" href="css/app.css">
 
 
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 </head>
 
 <body>
     
-
-    
-    
+    <div id="container">
+        <div id="project">
+            <button id='auto-charge-button'>Auto Charge</button>
+            <div id='status'>
+                <div class="status-bar">
+                    <input type="range" min="0" max="4" onchange="myFunction(this.value)">
+                </div>
+            </div>
+            
+            
+            
+            
+            <div id='battery'>
+                <div id='battery-top'>
+                    <div id='battery-top1'></div>
+                    <div id='battery-top2'></div>
+                </div>
+                <div id='battery-body'>
+                    <div class='battery-bar low'></div>
+                    <div class='battery-bar half'></div>
+                    <div class='battery-bar high'></div>
+                    <div class="battery-bar full"></div>
+                </div>
+                    <div id='battery-bottom'></div>
+            </div>
+        </div>
+    </div>
     
     <script src="js/battery/index.js"></script>
     <script src="js/main.js"></script>
+    
 </body>
+    
 </html>
