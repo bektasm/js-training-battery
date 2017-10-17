@@ -9,10 +9,10 @@ $(document).ready(function(){
         // prevent navigation keys trigger
         // e.preventDefault();
         $("#ranger").val(0);
-        paint([".full", ".high", ".half", ".low"], "white");
+        paint([".full", ".high", ".half", ".low"], "transparent");
         setTimeout(function () {
             paint([".full"], "red");
-            paint([".high", ".half", ".low"], "white");
+            paint([".high", ".half", ".low"], "transparent");
             $("#ranger").val(1);
 
         }, 3000);
@@ -49,19 +49,19 @@ $(document).ready(function(){
         // console.log('hallo', val);
         switch(+val){
             case 0:
-                paint([".full", ".high", ".half", ".low"], "white");
+                paint([".full", ".high", ".half", ".low"], "transparent");
                 break;
             case 1:
                 paint([".full"], "red");
-                paint([".high", ".half", ".low"], "white");
+                paint([".high", ".half", ".low"], "transparent");
                 break;
             case 2:
                 paint([".full", ".high"], "orange");
-                paint([".low", ".half"], "white");
+                paint([".low", ".half"], "transparent");
                 break;
             case 3:
                 paint([".full", ".high", ".half"], "yellow");
-                paint([".low"], "white");
+                paint([".low"], "transparent");
                 break;
             case 4:
                 paint([".full", ".high", ".half", ".low"], "green");
