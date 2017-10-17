@@ -17,7 +17,8 @@
 }
 
 .pil #status {
-    margin-left: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
     float: left;
 
 }
@@ -43,7 +44,7 @@
     padding: 9px 10px;
     margin-left: 10%;
     width: 105px;
-    height: 40px;
+    height: auto;
 }
 
 .pil #battery {
